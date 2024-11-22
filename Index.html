@@ -1,85 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página con Tarjetas</title>
+  <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="https://github.com/MagnusTweaker/MagnusTweaker.github.io/blob/main/styles.css">
+</head>
 <body>
-  <h1>Bienvenido a mi página</h1>
-  <div class="card-container">
-    <!-- 10 Cards en 2 filas -->
-    <div class="card" onclick="openModal('Título 1', 'https://via.placeholder.com/500', 'Descripción de la carta 1')">
-      <img src="https://via.placeholder.com/500" alt="Imagen 1">
-      <h3>Título 1</h3>
-    </div>
-    <div class="card" onclick="openModal('Título 2', 'https://via.placeholder.com/500', 'Descripción de la carta 2')">
-      <img src="https://via.placeholder.com/500" alt="Imagen 2">
-      <h3>Título 2</h3>
-    </div>
-    <div class="card" onclick="openModal('Título 3', 'https://via.placeholder.com/500', 'Descripción de la carta 3')">
-      <img src="https://via.placeholder.com/500" alt="Imagen 3">
-      <h3>Título 3</h3>
-    </div>
-    <div class="card" onclick="openModal('Título 4', 'https://via.placeholder.com/500', 'Descripción de la carta 4')">
-      <img src="https://via.placeholder.com/500" alt="Imagen 4">
-      <h3>Título 4</h3>
-    </div>
-    <div class="card" onclick="openModal('Título 5', 'https://via.placeholder.com/500', 'Descripción de la carta 5')">
-      <img src="https://via.placeholder.com/500" alt="Imagen 5">
-      <h3>Título 5</h3>
-    </div>
-    <div class="card" onclick="openModal('Título 6', 'https://via.placeholder.com/500', 'Descripción de la carta 6')">
-      <img src="https://via.placeholder.com/500" alt="Imagen 6">
-      <h3>Título 6</h3>
-    </div>
-    <div class="card" onclick="openModal('Título 7', 'https://via.placeholder.com/500', 'Descripción de la carta 7')">
-      <img src="https://via.placeholder.com/500" alt="Imagen 7">
-      <h3>Título 7</h3>
-    </div>
-    <div class="card" onclick="openModal('Título 8', 'https://via.placeholder.com/500', 'Descripción de la carta 8')">
-      <img src="https://via.placeholder.com/500" alt="Imagen 8">
-      <h3>Título 8</h3>
-    </div>
-    <div class="card" onclick="openModal('Título 9', 'https://via.placeholder.com/500', 'Descripción de la carta 9')">
-      <img src="https://via.placeholder.com/500" alt="Imagen 9">
-      <h3>Título 9</h3>
-    </div>
-    <div class="card" onclick="openModal('Título 10', 'https://via.placeholder.com/500', 'Descripción de la carta 10')">
-      <img src="https://via.placeholder.com/500" alt="Imagen 10">
-      <h3>Título 10</h3>
-    </div>
-  </div>
-
-  <!-- Modal y scripts permanecen igual -->
-  <div id="modal" class="overlay">
-    <div class="modal">
-      <h2 id="modal-title"></h2>
-      <img id="modal-image" src="" alt="Imagen Modal">
-      <p id="modal-description"></p>
-      <div class="buttons">
-        <button class="btn btn-contract" onclick="showThankYou()">Contratar</button>
-        <button class="btn btn-close" onclick="closeModal()">Cerrar</button>
+  <div class="container">
+    <h1 class="fade-in-title">Bienvenidos a la Página</h1>
+    <div class="card-container">
+      <!-- Tarjetas (10) -->
+      <div class="card" onclick="openCard(1)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 1">
+        <h2>Tarjeta 1</h2>
+      </div>
+      <div class="card" onclick="openCard(2)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 2">
+        <h2>Tarjeta 2</h2>
+      </div>
+      <div class="card" onclick="openCard(3)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 3">
+        <h2>Tarjeta 3</h2>
+      </div>
+      <div class="card" onclick="openCard(4)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 4">
+        <h2>Tarjeta 4</h2>
+      </div>
+      <div class="card" onclick="openCard(5)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 5">
+        <h2>Tarjeta 5</h2>
+      </div>
+      <div class="card" onclick="openCard(6)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 6">
+        <h2>Tarjeta 6</h2>
+      </div>
+      <div class="card" onclick="openCard(7)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 7">
+        <h2>Tarjeta 7</h2>
+      </div>
+      <div class="card" onclick="openCard(8)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 8">
+        <h2>Tarjeta 8</h2>
+      </div>
+      <div class="card" onclick="openCard(9)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 9">
+        <h2>Tarjeta 9</h2>
+      </div>
+      <div class="card" onclick="openCard(10)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 10">
+        <h2>Tarjeta 10</h2>
       </div>
     </div>
   </div>
-  <div id="thank-you" class="overlay">
-    <div class="modal">
-      <h2>¡Gracias por contratar!</h2>
-      <button class="btn btn-close" onclick="closeThankYou()">Cerrar</button>
+
+  <!-- Tarjeta flotante -->
+  <div id="popup-card" class="popup">
+    <div class="popup-content">
+      <h2 id="popup-title"></h2>
+      <img id="popup-image" src="" alt="">
+      <p id="popup-description">Descripción de la tarjeta.</p>
+      <button id="hire-button" onclick="hire()">Contratar</button>
+      <button id="close-popup" onclick="closePopup()">Cerrar</button>
     </div>
   </div>
-  <script>
-    function openModal(title, image, description) {
-      document.getElementById('modal-title').innerText = title;
-      document.getElementById('modal-image').src = image;
-      document.getElementById('modal-description').innerText = description;
-      document.getElementById('modal').classList.add('active');
-    }
 
-    function closeModal() {
-      document.getElementById('modal').classList.remove('active');
-    }
+  <!-- Mensaje de agradecimiento -->
+  <div id="thank-you" class="thank-you-popup">
+    <div class="popup-content">
+      <p>¡Gracias por contratar!</p>
+      <button id="close-thank-you" onclick="closeThankYou()">Cerrar</button>
+    </div>
+  </div>
 
-    function showThankYou() {
-      document.getElementById('thank-you').classList.add('active');
-    }
-
-    function closeThankYou() {
-      document.getElementById('thank-you').classList.remove('active');
-    }
-  </script>
+  <!-- Enlace al archivo JavaScript -->
+  <script src="https://github.com/MagnusTweaker/MagnusTweaker.github.io/blob/main/script.js"></script>
 </body>
+</html>
