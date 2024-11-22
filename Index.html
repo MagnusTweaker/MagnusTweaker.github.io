@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página con Tarjetas</title>
+  <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="fade-in-title">Bienvenidos a la Página</h1>
+    <div class="card-container">
+      <!-- Tarjetas (10) -->
+      <div class="card" onclick="openCard(1)">
+        <img src="assets/images/Skins/ff.jpg" alt="Imagen 1">
+        <h2>Tarjeta 1</h2>
+      </div>
+      <div class="card" onclick="openCard(2)">
+        <img src="assets/images/Skins/ff.jpg" alt="Imagen 2">
+        <h2>Tarjeta 2</h2>
+      </div>
+      <div class="card" onclick="openCard(3)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 3">
+        <h2>Tarjeta 3</h2>
+      </div>
+      <div class="card" onclick="openCard(4)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 4">
+        <h2>Tarjeta 4</h2>
+      </div>
+      <div class="card" onclick="openCard(5)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 5">
+        <h2>Tarjeta 5</h2>
+      </div>
+      <div class="card" onclick="openCard(6)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 6">
+        <h2>Tarjeta 6</h2>
+      </div>
+      <div class="card" onclick="openCard(7)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 7">
+        <h2>Tarjeta 7</h2>
+      </div>
+      <div class="card" onclick="openCard(8)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 8">
+        <h2>Tarjeta 8</h2>
+      </div>
+      <div class="card" onclick="openCard(9)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 9">
+        <h2>Tarjeta 9</h2>
+      </div>
+      <div class="card" onclick="openCard(10)">
+        <img src="https://via.placeholder.com/500" alt="Imagen 10">
+        <h2>Tarjeta 10</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tarjeta flotante -->
+  <div id="popup-card" class="popup">
+    <div class="popup-content">
+      <h2 id="popup-title"></h2>
+      <img id="popup-image" src="" alt="">
+      <p id="popup-description">Descripción de la tarjeta.</p>
+      <button id="hire-button" onclick="hire()">Contratar</button>
+      <button id="close-popup" onclick="closePopup()">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Mensaje de agradecimiento -->
+  <div id="thank-you" class="thank-you-popup">
+    <div class="popup-content">
+      <p>¡Gracias por contratar!</p>
+      <button id="close-thank-you" onclick="closeThankYou()">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Enlace al archivo JavaScript -->
+  <script src="assets/Js/script.js"></script>
+</body>
+</html>
